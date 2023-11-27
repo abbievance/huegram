@@ -1,4 +1,5 @@
 import React from "react";
+import { CiHeart } from "react-icons/ci";
 
 interface HueObject {
   color: string;
@@ -16,6 +17,7 @@ const Hue = (props: Props) => {
       className="flex flex-col h-64 aspect-square rounded-3xl text-center justify-between items-center"
       style={{ backgroundColor: props.hue.color }}
     >
+      <p className="text-white text-4xl opacity-80 ml-auto cursor-pointer"><CiHeart /></p>
       <p className="text-white text-2xl opacity-80">{props.hue.color}</p>
 
 

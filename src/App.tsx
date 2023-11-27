@@ -1,6 +1,7 @@
 import Menu from './components/Menu'
 import Main from './components/Main'
 import Profile from './components/Profile'
+import Header from './components/Header'
 import { useState } from 'react'
 
 function App() {
@@ -24,14 +25,18 @@ function App() {
   {
       console.log(color)
       const newHue = {color, username: currentUser.username, id: hues[hues.length-1].id+1 , likes:0};
-      setHues( [...hues, newHue ] );
+      setHues( [newHue, ...hues ] );
   }
 
   return (
-    <div className='flex bg-slate-800 h-screen'>
+    <div className='flex bg-slate-800 h-screen overflow-x-hidden'>
       {/* <Menu /> */}
+      <div className="flex flex-col">
+      <Header addHue = {addNewHue}/>
 
-      <Main hues={hues} addHue = {addNewHue} />
+      <Main hues={hues} />
+      </div>
+
 
       <Profile />
     </div>
