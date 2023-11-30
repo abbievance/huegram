@@ -1,4 +1,3 @@
-import React from 'react'
 import PostHue  from './PostHue'
 import { IoIosSearch } from "react-icons/io";
 import { RiHashtag } from "react-icons/ri";
