@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Hue from './Hue'
 
 interface Props{
@@ -12,7 +12,7 @@ const PostHue = (props:Props) => {
   return (
     <div className='flex flex-row p-4 justify-evenly gap-8'>
 
-        <div className='flex flex-col w-full p-4 gap-4 justify-center align-middle' style={{backgroundColor: color}}>
+        <div className='flex flex-col w-full p-4 gap-4 justify-center align-middle'>
             <input type="text" name="hue" id="hue" onChange={ (event) => setColor(event.target.value) } />
             <a href="#" onClick={ () => props.addHue(color)  } className="btn bg-white text-cyan-950 text-center">Post</a>
         </div>
