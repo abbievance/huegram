@@ -10,7 +10,7 @@ interface Props {
 const Header = (props : Props) => {
   return (
     <>
-    <div className="flex flex-col text-white justify-between w-3/4 m-auto text-3xl md:flex-row">
+    <div className="flex flex-col text-white justify-between w-full px-0 text-4xl md:flex-row md:px-24">
         <div className='flex mt-2 justify-center items-center'>
             <h1><RiHashtag /></h1>
             <h1>Huegram</h1>
