@@ -1,18 +1,19 @@
 import Main from './components/Main'
 import Profile from './components/Profile'
 import Header from './components/Header'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function App() {
 
-  const [hues, setHues] = useState([
-    {id: 1, color: '#ffa500', username: "kaylee", likes: 15, isLiked:false},
-    {id: 2, color: '#ff8c00', username: "therealkaylee", likes: 8},
-    {id: 3, color: '#ff7f50', username: "odomester", likes: 20},
-    {id: 4, color: '#ff6347', username: "kaylee", likes: 200},
-    {id: 5, color: '#ff6747', username: "abbieV", likes: 13},
-    {id: 6, color: '#ff6747', username: "abbieV", likes: 13},
-  ]);
+  const [hues, setHues] = useState<any[]>([]) // eslint-disable-line @typescript-eslint/no-explicit-any
+
+  useEffect( ()=>
+  {
+    fetch('./sampleData.json')
+    .then( res => res.json() )
+    .then( data => setHues(data) ) 
+  }, [])
+
 
   const [currentUser] = useState({
     username: "kavery",
@@ -23,7 +24,7 @@ function App() {
   const addNewHue = (color:string ) => 
   {
       console.log(color)
-      const newHue = {color, username: currentUser.username, id: hues[hues.length-1].id+1 , likes:0};
+      const newHue = {color, username: currentUser.username, id: hues[hues.length-1].id+1 , likes:0, isLiked: false};
       setHues( [newHue, ...hues ] );
   }
 

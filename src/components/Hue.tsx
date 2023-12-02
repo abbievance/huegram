@@ -13,7 +13,7 @@ interface Props {
 const Hue = (props: Props) => {
   return (
     <div
-      className="flex flex-col h-64 aspect-square rounded-3xl text-center justify-between items-center"
+      className="flex flex-col h-64 max-h-full aspect-square rounded-3xl text-center justify-between items-center"
       style={{ backgroundColor: props.hue.color }}
     >
       <p className="text-white text-4xl opacity-80 ml-auto cursor-pointer"><CiHeart /></p>
