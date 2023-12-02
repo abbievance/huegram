@@ -4,7 +4,7 @@
     {"id": 3, "color": "#ff7f50", "username": "odomester", "likes": 20, "isLiked":false},
     {"id": 4, "color": "#ff6347", "username": "kaylee", "likes": 200, "isLiked":false},
     {"id": 5, "color": "#ff6747", "username": "abbieV", "likes": 13, "isLiked":false},
-    {"id": 6, "color": "#ffaa67", "username": "mirabel", "likes": 500, "isLiked":false},
+    {"id": 6, "color": "#ff2c30", "username": "Mirabel", "likes": 13, "isLiked":false},
     {"id": 7, "color": "#ffb200", "username": "floor", "likes": 6, "isLiked":false},
     {"id": 8, "color": "#ffa300", "username": "blanket", "likes": 63, "isLiked":false}
 ]

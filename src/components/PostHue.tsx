@@ -6,7 +6,6 @@ interface Props{
 }
 
 const PostHue = (props:Props) => {
-
   const[color, setColor] = useState('')
 
   const[value, setValue] = useState('');
