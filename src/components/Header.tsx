@@ -12,8 +12,8 @@ const Header = (props : Props) => {
     <>
     <div className="flex flex-col text-white justify-between w-full px-0 text-4xl lg:flex-row md:px-24">
         <div className='flex mt-2 justify-center items-center'>
-            <h1><RiHashtag /></h1>
-            <h1>Huegram</h1>
+            <h1 className='text-center'><RiHashtag /></h1>
+            <h1 className='text-center'>Huegram</h1>
         </div>
         
         <div className='flex mt-2 justify-center'>
