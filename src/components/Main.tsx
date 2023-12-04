@@ -1,10 +1,6 @@
 import Hue from './Hue'
+import HueObject from '../HueObject'
 
-interface HueObject {
-    color: string,
-    username: string,
-    likes: number
-}
 interface Props {
     hues: HueObject[],
 }
