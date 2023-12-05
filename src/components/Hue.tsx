@@ -21,18 +21,18 @@ const Hue = (props: Props) => {
     console.log(typeof(text_color))
 
     if(text_color == "#000000"){
-      return "black"
+      return "slate-700"
     }
     if(text_color == "#FFFFFF"){
-      return "white"
+      return "slate-200"
     }
   }
 
   const adjustTextOnBackground = (backgroundColor : string) => {
-    if (backgroundColor == "bg-white"){
+    if (backgroundColor == "bg-slate-200"){
       return "black";
     }
-    if (backgroundColor == "bg-black"){
+    if (backgroundColor == "bg-slate-700"){
       return "white";
     }
   }
