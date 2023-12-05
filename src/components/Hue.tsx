@@ -21,6 +21,25 @@ const Hue = (props: Props) => {
     console.log(typeof(text_color))
 
     if(text_color == "#000000"){
+      return "black"
+    }
+    if(text_color == "#FFFFFF"){
+      return "white"
+    }
+  }
+
+  const adjustBackground = (post: HueObject) => {
+    const r_num = Number("0x" + post.color.slice(1, 3));
+    const g_num = Number("0x" + post.color.slice(3, 5));
+    const b_num = Number("0x" + post.color.slice(5, 7));
+
+    const hue_intensity = r_num * 0.299 + g_num * 0.587 + b_num * 0.114;
+
+    const text_color = hue_intensity > 186 ? "#000000" : "#FFFFFF";
+
+    console.log(typeof(text_color))
+
+    if(text_color == "#000000"){
       return "slate-700"
     }
     if(text_color == "#FFFFFF"){
@@ -46,7 +65,7 @@ const Hue = (props: Props) => {
       <p className={`text-${adjustTextColor(props.hue)} text-2xl opacity-80`}>{props.hue.color}</p>
 
 
-      <div className={`bg-${adjustTextColor(props.hue)} text-${adjustTextOnBackground(`bg-${adjustTextColor(props.hue)}`)} flex w-full text-center justify-between p-4 rounded-b-2xl`}>
+      <div className={`bg-${adjustBackground(props.hue)} text-${adjustTextOnBackground(`bg-${adjustBackground(props.hue)}`)} flex w-full text-center justify-between p-4 rounded-b-2xl`}>
         <p className="text-xl">{props.hue.username}</p>
         <div className="flex  items-center">
         <p className="text-xl">{props.hue.likes}</p>
