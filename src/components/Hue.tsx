@@ -28,6 +28,15 @@ const Hue = (props: Props) => {
     }
   }
 
+  const adjustTextOnBackground = (backgroundColor : string) => {
+    if (backgroundColor == "bg-white"){
+      return "black";
+    }
+    if (backgroundColor == "bg-black"){
+      return "white";
+    }
+  }
+
   return (
     <div
       className="flex flex-col h-64 max-h-full aspect-square rounded-3xl text-center justify-between items-center"
@@ -37,7 +46,7 @@ const Hue = (props: Props) => {
       <p className={`text-${adjustTextColor(props.hue)} text-2xl opacity-80`}>{props.hue.color}</p>
 
 
-      <div className={`bg-black text-white flex w-full text-center justify-between p-4 rounded-b-2xl`}>
+      <div className={`bg-${adjustTextColor(props.hue)} text-${adjustTextOnBackground(`bg-${adjustTextColor(props.hue)}`)} flex w-full text-center justify-between p-4 rounded-b-2xl`}>
         <p className="text-xl">{props.hue.username}</p>
         <div className="flex  items-center">
         <p className="text-xl">{props.hue.likes}</p>
