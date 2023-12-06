@@ -14,7 +14,7 @@ const PostHue = (props:Props) => {
 
 
   return (
-    <div className='flex flex-col p-4 justify-evenly gap-8  ml-8'>
+    <div className='flex-col p-4 justify-evenly gap-8 hidden sm:flex'>
 
         <div className='flex flex-col p-4 gap-3 justify-center align-middle'>
           <h1 className='text-white text-center text-xl w-full'>Enter a valid hex code</h1>
