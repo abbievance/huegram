@@ -3,7 +3,7 @@ import Hue from './Hue'
 import { RiHashtag } from 'react-icons/ri'
  
 interface Props{
-    addHue: (color:string)=> void
+    addHue: (color:string)=> void;
 }
 
 const PostHue = (props:Props) => {
