@@ -14,10 +14,10 @@ const PostHue = (props:Props) => {
 
 
   return (
-    <div className='flex flex-row p-4 justify-evenly gap-8'>
+    <div className='flex flex-col p-4 justify-evenly gap-8  ml-8'>
 
-        <div className='flex flex-col w-full p-4 gap-3 justify-center align-middle'>
-          <h1 className='text-white text-right text-xl w-full'>Enter a valid hex code</h1>
+        <div className='flex flex-col p-4 gap-3 justify-center align-middle'>
+          <h1 className='text-white text-center text-xl w-full'>Enter a valid hex code</h1>
           <div className='flex items-center gap-1'>
           <h1 className='text-white text-3xl'><RiHashtag /></h1>
             <input type="text" placeholder="ff2c40" name="hue" id="hue" value={value}
@@ -27,14 +27,14 @@ const PostHue = (props:Props) => {
                   setValue(event.target.value.toLowerCase())
                 }}}  
                    
-              className='rounded-lg p-2'/>
+              className='rounded-lg w-full text-black text-2xl'/>
 
           </div>
 
-            <button onClick={ () => {props.addHue(color), setColor(""), setValue("")}  } className="btn bg-slate-800 border-white border-2 text-white  text-center rounded-lg p-1">Post</button>
+            <button onClick={ () => {props.addHue(color), setColor(""), setValue("")}  } className="btn bg-slate-800 border-white border-2 text-white  text-center rounded-lg text-2xl">Post</button>
         </div>
 
-        <div className='h-52 hidden sm:block'><Hue hue={ {color, username:"kavery", likes:0, id:0, isLiked:false}} /></div>
+        <div className='hidden sm:block'><Hue hue={ {color, username:"kavery", likes:0, id:0, isLiked:false}} /></div>
 
     </div>
   )

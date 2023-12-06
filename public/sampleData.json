@@ -6,5 +6,6 @@
     {"id": 5, "color": "#ff6747", "username": "abbieV", "likes": 13, "isLiked":false},
     {"id": 6, "color": "#ff2c30", "username": "Mirabel", "likes": 13, "isLiked":false},
     {"id": 7, "color": "#ffb200", "username": "floor", "likes": 6, "isLiked":false},
-    {"id": 8, "color": "#ffa300", "username": "blanket", "likes": 63, "isLiked":false}
+    {"id": 8, "color": "#ffa300", "username": "blanket", "likes": 63, "isLiked":false},
+    {"id": 9, "color": "#faa200", "username": "microwave", "likes": 23, "isLiked":false}
 ]

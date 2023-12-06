@@ -1,6 +1,6 @@
 import Main from './components/Main'
 import Profile from './components/Profile'
-import Header from './components/Header'
+import Post from './components/Post'
 import { useState, useEffect } from 'react'
 import HueObject from './HueObject'
 
@@ -42,11 +42,9 @@ function App() {
   return (
     <div className='flex bg-gradient-to-b from-slate-800 to-sky-900 h-screen overflow-x-hidden'>
       {/* <Menu /> */}
-      <div className="flex flex-col">
-      <Header addHue = {addNewHue}/>
+      <Post addHue = {addNewHue}/>
 
       <Main hues={hues} toggleLike={toggleLike}/>
-      </div>
 
 
       <Profile />
