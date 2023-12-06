@@ -3,6 +3,7 @@ import HueObject from '../HueObject'
 
 interface Props {
     hues: HueObject[],
+    toggleLike: (id:number) => void;
 }
 
 const Main = (props : Props) => {
@@ -12,7 +13,7 @@ const Main = (props : Props) => {
 
         {props.hues.map(  (hue) => ( 
             
-            <Hue hue={hue}/>
+            <Hue hue={hue} toggleLike={props.toggleLike}/>
        ))}
 
         

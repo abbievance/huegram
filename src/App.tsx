@@ -29,13 +29,23 @@ function App() {
       setHues( [newHue, ...hues ] );
   }
 
+  const toggleLike = (id:number) =>
+  {
+    const newHues = [...hues];
+    const hue = newHues.find(h => h.id == id);
+    if (hue){
+      hue.isLiked = !hue.isLiked;
+      setHues(newHues)
+    }
+  }
+
   return (
     <div className='flex bg-gradient-to-b from-slate-800 to-sky-900 h-screen overflow-x-hidden'>
       {/* <Menu /> */}
       <div className="flex flex-col">
       <Header addHue = {addNewHue}/>
 
-      <Main hues={hues} />
+      <Main hues={hues} toggleLike={toggleLike}/>
       </div>
 
 
