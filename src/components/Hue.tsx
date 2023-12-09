@@ -40,7 +40,7 @@ const Hue = (props: Props) => {
     console.log(typeof(text_color))
 
     if(text_color == "#000000"){
-      return "slate-700"
+      return "gray-900"
     }
     if(text_color == "#FFFFFF"){
       return "slate-200"
@@ -51,7 +51,7 @@ const Hue = (props: Props) => {
     if (backgroundColor == "bg-slate-200"){
       return "black";
     }
-    if (backgroundColor == "bg-slate-700"){
+    if (backgroundColor == "bg-gray-900"){
       return "white";
     }
   }
