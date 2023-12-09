@@ -3,20 +3,20 @@ import Profile from './components/Profile'
 import Post from './components/Post'
 import { useState, useEffect } from 'react'
 import HueObject from './HueObject'
+import userProfileObject from './userProfileObject'
 
 function App() {
 
   const [hues, setHues] = useState<HueObject[]>([]);
 
-  const [userHues] = useState([
-    {id: 1, color: '#ffa500', username: "kaylee", likes: 15, isLiked:false},
-    {id: 2, color: '#ffa500', username: "kaylee", likes: 15, isLiked:false},
-    {id: 3, color: '#ff8c00', username: "therealkaylee", likes: 8, isLiked:false},
-    {id: 4, color: '#ff7f50', username: "odomester", likes: 20, isLiked:false},
-    {id: 5, color: '#ff6347', username: "kaylee", likes: 200, isLiked:false},
-    {id: 6, color: '#ff6747', username: "abbieV", likes: 13, isLiked:false},
-    {id: 7, color: '#ff6747', username: "abbieV", likes: 13, isLiked:false},
-  ]);
+  const [userProfile, setUserProfile] = useState<userProfileObject[]>([]);
+
+  useEffect( ()=>
+  {
+    fetch('./userInfo.json')
+    .then( res => res.json() )
+    .then( data => setUserProfile(data) ) 
+  }, [])
 
   useEffect( ()=>
   {
@@ -35,8 +35,10 @@ function App() {
   const addNewHue = (color:string ) => 
   {
       console.log(color)
-      const newHue = {color, username: currentUser.username, id: hues[hues.length-1].id+1 , likes:0, isLiked: false};
+      const newHue = {color, username: currentUser.username, id: hues.length + 1 , likes:0, isLiked: false};
       setHues( [newHue, ...hues ] );
+
+
   }
 
   const toggleLike = (id:number) =>
@@ -57,7 +59,7 @@ function App() {
       <Main hues={hues} toggleLike={toggleLike}/>
 
 
-      <Profile userHues={userHues} />
+      <Profile userProfile={userProfile} />
     </div>
   )
 }

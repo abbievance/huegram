@@ -1,40 +1,41 @@
-import HueObject from "../HueObject"
+import userProfileObject from "../userProfileObject"
 
 interface Props {
-  userHues: HueObject[];
+  userProfile: userProfileObject[];
 }
 
 
 const Profile = (props: Props) => {
   return (
-    <div className='flex flex-col border-2 p-4 sm:p-8 items-center text-white justify-between'>
+    <div className='p-4 sm:p-8 text-white sm:block hidden'>
 
-        <h1 className='text-3xl sm:text-4xl'>@kavery</h1>
+      
+              {props.userProfile.map((profile) => (
+                <div className="h-full flex">
+                  <div className="flex flex-col justify-between items-center">
+                    <h1 className='text-3xl sm:text-4xl'>@{profile.username}</h1>
+                    <h1 className='text-2xl sm:text-3xl opacity-80'>Your Palette</h1>
+                    <div className="flex flex-wrap p-5 pr-3 gap-2 h-56 aspect-square overflow-y-hidden">
+                      {profile.hues.map((hue) => (
+                        <div className="h-3 w-3" style={{backgroundColor: `${hue.color}`}}></div>
+                      ))}
+                  </div>
 
-      <div className="flex flex-col justify-center items-center">
-          <h1 className='text-2xl sm:text-3xl opacity-80'>Your Palette</h1>
-
-          {/* ignore this horrible code */}
-          <div className="flex flex-wrap p-5 pr-3 gap-2 h-48 aspect-square overflow-y-hidden">
-              {props.userHues.map((hue) => (
-                <div className="h-3 w-3" style={{backgroundColor: `${hue.color}`}}></div>
+                    <div className='flex flex-col justify-center items-center '>
+                      <h1 className='text-7xl sm:text-8xl'>{profile.likes}</h1>
+                      <h2 className='text-3xl sm:text-4xl opacity-80'>Likes</h2>
+                    </div>
+            
+                    <div className='flex flex-col justify-center items-center'>
+                      <h1 className='text-7xl sm:text-8xl'>{profile.hues.length}</h1>
+                      <h2 className='text-3xl sm:text-4xl opacity-80'>Hues</h2>
+                    </div>
+                </div>
+              </div>
               ))}
           </div>
-        </div>
 
 
-        <div className='flex flex-col justify-center items-center'>
-          <h1 className='text-7xl sm:text-8xl'>86</h1>
-          <h2 className='text-3xl sm:text-4xl opacity-80'>Likes</h2>
-        </div>
-
-        <div className='flex flex-col justify-center items-center'>
-          <h1 className='text-7xl sm:text-8xl'>47</h1>
-          <h2 className='text-3xl sm:text-4xl opacity-80'>Hues</h2>
-        </div>
-
-
-    </div>
   )
 }
 

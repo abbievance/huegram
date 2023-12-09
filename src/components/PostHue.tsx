@@ -14,7 +14,7 @@ const PostHue = (props:Props) => {
 
 
   return (
-    <div className='flex-col p-4 justify-evenly gap-8 hidden ml-8 sm:flex'>
+    <div className='flex-col p-4 justify-evenly gap-8 sm:ml-8 ml-6'>
 
         <div className='flex flex-col p-4 gap-3 justify-center align-middle'>
           <h1 className='text-white text-center text-xl w-full'>Enter a valid hex code</h1>
@@ -34,7 +34,7 @@ const PostHue = (props:Props) => {
             <button onClick={ () => {props.addHue(color), setColor(""), setValue("")}  } className="btn bg-slate-800 border-white border-2 text-white  text-center rounded-lg text-2xl">Post</button>
         </div>
 
-        <div className='hidden sm:block'><Hue hue={ {color, username:"kavery", likes:0, id:0, isLiked:false}} /></div>
+        <div className='sm:w-full h-44'><Hue hue={ {color, username:"kavery", likes:0, id:0, isLiked:false}} /></div>
 
     </div>
   )

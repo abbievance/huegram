@@ -10,7 +10,7 @@ interface Props {
 
 const Main = (props : Props) => {
   return (
-    <div className='flex flex-col justify-center items-end'>
+    <div className='flex flex-col justify-center items-end border-l-2 border-r-2'>
       <div className="flex flex-col sm:flex-row justify-around w-full">
 
         <div className='flex mt-2 justify-center items-center text-white text-4xl'>
