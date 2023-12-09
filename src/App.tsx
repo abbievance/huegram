@@ -37,6 +37,12 @@ function App() {
       console.log(color)
       const newHue = {color, username: currentUser.username, id: hues.length + 1 , likes:0, isLiked: false};
       setHues( [newHue, ...hues ] );
+      const updatedUserHues = {
+        ...userProfile[0], hues: [
+          ...userProfile[0].hues, newHue
+        ]
+      }
+      setUserProfile([updatedUserHues])
 
 
   }
