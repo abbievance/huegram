@@ -33,7 +33,7 @@ const Main = (props : Props) => {
 
   return (
     <div className='flex flex-col justify-start items-center border-l-2 border-r-2 w-3/4'>
-      <div className="flex flex-col sm:flex-row fixed w-1/2 justify-between items-center  mt-2">
+      <div className="flex flex-col lg:flex-row fixed w-1/2 justify-between items-center mt-2">
 
         <div className='flex mt-2 justify-center items-center text-white text-4xl'>
             <h1 className='text-center'><RiHashtag /></h1>
@@ -49,7 +49,7 @@ const Main = (props : Props) => {
         </div>
       </div>
    
-      <div className='flex flex-wrap w-full justify-center gap-8 overflow-y-auto sm:mt-20 mt-36'>
+      <div className='flex flex-wrap w-full justify-center gap-8 overflow-y-auto lg:mt-20 mt-36'>
         <div>
               {searchCondition() ? <div className='flex flex-wrap gap-8 justify-center'> 
                   {filteredHues.map(  (hue) => (          
