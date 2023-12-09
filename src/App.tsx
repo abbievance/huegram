@@ -53,6 +53,7 @@ function App() {
     const hue = newHues.find(h => h.id == id);
     if (hue){
       hue.isLiked = !hue.isLiked;
+      hue.isLiked ? hue.likes += 1 : hue.likes -= 1;
       setHues(newHues)
     }
   }
