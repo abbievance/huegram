@@ -49,7 +49,7 @@ const Main = (props : Props) => {
         </div>
       </div>
    
-      <div className='flex flex-wrap w-full justify-center gap-8 overflow-y-auto mt-20'>
+      <div className='flex flex-wrap w-full justify-center gap-8 overflow-y-auto sm:mt-20 mt-36'>
         <div>
               {searchCondition() ? <div className='flex flex-wrap gap-8 justify-center'> 
                   {filteredHues.map(  (hue) => (          
