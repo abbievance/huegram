@@ -26,16 +26,10 @@ function App() {
   }, [])
 
 
-  const [currentUser] = useState({
-    username: "kavery",
-    likes: 58,
-    hues: [ {id:36, color:'#ffa510', username:"kavery", likes: 15}]
-  });
-
   const addNewHue = (color:string ) => 
   {
       console.log(color)
-      const newHue = {color, username: currentUser.username, id: hues.length + 1 , likes:0, isLiked: false};
+      const newHue = {color, username: userProfile[0].username, id: hues.length + 1 , likes:0, isLiked: false};
       setHues( [newHue, ...hues ] );
       const updatedUserHues = {
         ...userProfile[0], hues: [
@@ -47,6 +41,7 @@ function App() {
 
   }
 
+  
   const toggleLike = (id:number) =>
   {
     const newHues = [...hues];
@@ -56,6 +51,27 @@ function App() {
       hue.isLiked ? hue.likes += 1 : hue.likes -= 1;
       setHues(newHues)
     }
+
+    if (hue != undefined){
+      const userHue = userProfile[0].hues.includes(hue)
+      if ( userHue && hue.isLiked){
+        const newLikes = userProfile[0].likes + 1;
+        const updatedUserHues = {
+          ...userProfile[0], likes: newLikes
+        }
+        setUserProfile([updatedUserHues])
+      }
+      if (userHue && !hue.isLiked){
+        const newLikes = userProfile[0].likes - 1;
+        const updatedUserHues = {
+          ...userProfile[0], likes: newLikes
+        }
+        setUserProfile([updatedUserHues])
+      }      
+    }
+
+
+
   }
 
   return (
