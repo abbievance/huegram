@@ -34,7 +34,7 @@ const PostHue = (props:Props) => {
             <button onClick={ () => {props.addHue(color), setColor(""), setValue("")}  } className="btn bg-slate-800 border-white border-2 text-white  text-center rounded-lg text-2xl">Post</button>
         </div>
 
-        <div className='sm:w-full h-44'><Hue hue={ {color, username:"kavery", likes:0, id:0, isLiked:false}} /></div>
+        <div className='sm:h-full h-44'><Hue hue={ {color, username:"kavery", likes:0, id:0, isLiked:false}} /></div>
 
     </div>
   )
