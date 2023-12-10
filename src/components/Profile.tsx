@@ -15,7 +15,7 @@ const Profile = (props: Props) => {
                   <div className="flex flex-col justify-between items-center">
                     <h1 className='text-3xl sm:text-4xl'>@{profile.username}</h1>
                     <h1 className='text-2xl sm:text-3xl opacity-80 text-center'>Your Palette</h1>
-                    <div className="w-52 h-52 border-2 table">
+                    <div className="w-52 h-52 border-2 table rounded-full overflow-hidden">
                           {profile.hues.map((hue) => (
                             <div className="table-cell w-3 h-3" style={{backgroundColor: `${hue.color}`}}></div>
                           ))}
