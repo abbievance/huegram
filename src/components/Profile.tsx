@@ -1,4 +1,4 @@
-import userProfileObject from "../userProfileObject"
+import userProfileObject from "../userProfileObject";
 
 interface Props {
   userProfile: userProfileObject[];
@@ -14,12 +14,13 @@ const Profile = (props: Props) => {
                 <div className="h-full flex">
                   <div className="flex flex-col justify-between items-center">
                     <h1 className='text-3xl sm:text-4xl'>@{profile.username}</h1>
-                    <h1 className='text-2xl sm:text-3xl opacity-80'>Your Palette</h1>
-                    <div className="flex flex-wrap p-5 pr-3 gap-2 h-56 aspect-square overflow-y-hidden">
-                      {profile.hues.map((hue) => (
-                        <div className="h-3 w-3" style={{backgroundColor: `${hue.color}`}}></div>
-                      ))}
-                  </div>
+                    <h1 className='text-2xl sm:text-3xl opacity-80 text-center'>Your Palette</h1>
+                    <div className="w-52 h-52 border-2 table">
+                          {profile.hues.map((hue) => (
+                            <div className="table-cell w-3 h-3" style={{backgroundColor: `${hue.color}`}}></div>
+                          ))}
+                      </div>
+
 
                     <div className='flex flex-col justify-center items-center '>
                       <h1 className='text-7xl sm:text-8xl'>{profile.likes}</h1>
