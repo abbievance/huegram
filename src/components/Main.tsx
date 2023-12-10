@@ -45,7 +45,7 @@ const Main = (props : Props) => {
             onChange={(e) => {
               setSearchHue(e.target.value), filterHues()
             }} />
-            <button className='cursor-pointer ml-2 text-white text-3xl'><IoIosSearch /></button>
+            <h1 className='ml-2 text-white text-3xl'><IoIosSearch /></h1>
         </div>
       </div>
    

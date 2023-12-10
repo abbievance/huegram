@@ -58,7 +58,7 @@ const Hue = (props: Props) => {
 
   return (
     <div
-      className="flex flex-col h-64 max-h-full aspect-square rounded-3xl text-center justify-between items-center" onDoubleClick={() => props.toggleLike && props.toggleLike(props.hue.id)}
+      className="flex flex-col sm:h-64 h-56 max-h-full aspect-square rounded-3xl text-center justify-between items-center" onDoubleClick={() => props.toggleLike && props.toggleLike(props.hue.id)}
       style={{ backgroundColor: props.hue.color }}
     >
       <p className={`text-${adjustTextColor(props.hue)} mt-2 mr-1 text-2xl opacity-80 ml-auto cursor-pointer`} onClick={() => props.toggleLike && props.toggleLike(props.hue.id)}>{props.hue.isLiked ? <span><FaHeart /></span> : <span><FaRegHeart /></span>}</p>

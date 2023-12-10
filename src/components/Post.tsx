@@ -9,7 +9,7 @@ const Header = (props : Props) => {
     <>
     <div className="flex flex-col text-white px-0 text-4xl justify-center items-center">
 
-        <div className='flex'>
+        <div className='flex flex-col h-full justify-around'>
             <PostHue addHue={props.addHue}/>
         </div>
         
