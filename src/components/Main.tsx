@@ -41,7 +41,7 @@ const Main = (props : Props) => {
             <h1 className='text-center'>Huegram</h1>
         </div>
 
-        <div className='flex mt-2 justify-center items-center w-full sm:w-1/4 mr-6 search'>
+        <div className='flex mt-2 justify-center items-center w-full sm:w-1/4 lg:mr-6 mr-0 search'>
             <input type="text" placeholder='Search Hues...' name="search" id="search" className='text-slate-800 rounded-lg p-1' value={searchHue}
             onChange={(e) => {
               setSearchHue(e.target.value), filterHues()
