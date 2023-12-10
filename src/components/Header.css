@@ -1,0 +1,13 @@
+@media (max-width: 1225px) {
+    .header{
+        flex-direction: column;
+    }
+
+    .hues{
+        margin-top: 8rem;
+    }
+
+    .search{
+        margin-right: 0;
+    }
+  }
