@@ -75,7 +75,7 @@ function App() {
   }
 
   return (
-    <div className='flex bg-gradient-to-b from-slate-800 to-sky-900 h-screen overflow-x-hidden'>
+    <div className='flex bg-gradient-to-b from-slate-800 to-sky-700 h-screen overflow-x-hidden'>
       {/* <Menu /> */}
       <Post addHue = {addNewHue}/>
 
