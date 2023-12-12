@@ -12,6 +12,8 @@ const PostHue = (props:Props) => {
 
   const[value, setValue] = useState('');
 
+  const[placeholder, setPlaceholder] = useState("f08000");
+
 
   return (
     <div className='flex-col p-4 justify-evenly gap-8 sm:ml-8 ml-2'>
@@ -20,7 +22,7 @@ const PostHue = (props:Props) => {
           <h1 className='text-neutral-900 text-center text-2xl w-full ml-1'>Enter a hex code</h1>
           <div className='flex items-center gap-1'>
           <h1 className='text-neutral-900 text-3xl'><RiHashtag /></h1>
-            <input type="text" placeholder="f08000" name="hue" id="hue" value={value}
+            <input type="text" placeholder={`${placeholder.replace("#", "")}`} name="hue" id="hue" value={value}
              onChange={ (event) => {
               if (event.target.value.length <= 6 || event.target.value.toLowerCase() === ""){
                   setColor(`#${event.target.value.toLowerCase()}`), 
@@ -31,7 +33,7 @@ const PostHue = (props:Props) => {
 
           </div>
 
-            <button onClick={ () => {props.addHue(color), setColor("#f08000"), setValue("")}  } className="btn border-transparent bg-neutral-900 opacity-80 text-center rounded-lg text-2xl hover:opacity-100">Post</button>
+            <button onClick={ () => {props.addHue(color), setColor(color), setValue(""), setPlaceholder(color)}  } className="btn border-transparent bg-neutral-900 opacity-80 text-center rounded-lg text-2xl hover:opacity-100">Post</button>
         </div>
 
         <div className='mt-9'><Hue hue={ {color, username:"abbieV", likes:0, id:0, isLiked:false}} /></div>
