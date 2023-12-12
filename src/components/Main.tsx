@@ -33,20 +33,20 @@ const Main = (props : Props) => {
   }
 
   return (
-    <div className='flex flex-col justify-start items-center border-l-2 border-r-2 w-3/4'>
+    <div className='flex flex-col justify-start items-center border-x-2 border-black border-opacity-20 w-3/4'>
       <div className="flex flex-col lg:flex-row fixed w-1/2 lg:justify-evenly justify-between items-center mt-2 header">
 
         <div className='flex mt-2 justify-center items-center text-white text-4xl'>
-            <h1 className='text-center'><RiHashtag /></h1>
-            <h1 className='text-center'>Huegram</h1>
+            <h1 className='text-center text-neutral-900 mt-1'><RiHashtag /></h1>
+            <h1 className='text-center text-neutral-900'>Huegram</h1>
         </div>
 
-        <div className='flex mt-2 justify-center items-center w-full sm:w-1/4 search'>
-            <input type="text" placeholder='Search Hues...' name="search" id="search" className='text-slate-800 rounded-lg p-1' value={searchHue}
+        <div className='flex mt-3 justify-center items-center w-full sm:w-1/4 search'>
+            <input type="text" placeholder='Search...' name="search" id="search" className='text-slate-800 rounded-lg p-1' value={searchHue}
             onChange={(e) => {
               setSearchHue(e.target.value), filterHues()
             }} />
-            <h1 className='ml-2 text-white text-3xl'><IoIosSearch /></h1>
+            <h1 className='ml-2 text-3xl text-neutral-900'><IoIosSearch /></h1>
         </div>
       </div>
    

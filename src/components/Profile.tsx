@@ -7,15 +7,15 @@ interface Props {
 
 const Profile = (props: Props) => {
   return (
-    <div className='p-4 sm:p-8 text-white sm:block hidden'>
+    <div className='p-4 sm:p-8 text-neutral-900 sm:block hidden"'>
 
       
               {props.userProfile.map((profile) => (
                 <div className="h-full flex">
                   <div className="flex flex-col justify-between items-center">
                     <h1 className='text-3xl sm:text-4xl'>@{profile.username}</h1>
-                    <h1 className='text-2xl sm:text-3xl opacity-80 text-center'>Your Palette</h1>
-                    <div className="w-52 h-52 border-2 table rounded-full overflow-hidden">
+                    <h1 className='text-2xl sm:text-3xl text-center'>Your Palette</h1>
+                    <div className="w-52 h-52 border-2 table rounded-full overflow-hidden border-black border-opacity-20">
                           {profile.hues.map((hue) => (
                             <div className="table-cell w-3 h-3" style={{backgroundColor: `${hue.color}`}}></div>
                           ))}
