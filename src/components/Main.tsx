@@ -37,8 +37,8 @@ const Main = (props : Props) => {
       <div className="flex flex-col lg:flex-row fixed w-1/2 lg:justify-evenly justify-between items-center mt-2 header">
 
         <div className='flex mt-2 justify-center items-center text-white text-4xl'>
-            <h1 className='text-center text-neutral-900 mt-1'><RiHashtag /></h1>
-            <h1 className='text-center text-neutral-900'>Huegram</h1>
+            <h1 className='text-center text-[#5A5A5A] mt-1'><RiHashtag /></h1>
+            <h1 className='text-center text-[#5A5A5A]'>Huegram</h1>
         </div>
 
         <div className='flex mt-3 justify-center items-center w-full sm:w-1/4 search'>
@@ -46,7 +46,7 @@ const Main = (props : Props) => {
             onChange={(e) => {
               setSearchHue(e.target.value), filterHues()
             }} />
-            <h1 className='ml-2 text-3xl text-neutral-900'><IoIosSearch /></h1>
+            <h1 className='ml-2 text-3xl text-[#5A5A5A]'><IoIosSearch /></h1>
         </div>
       </div>
    

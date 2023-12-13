@@ -7,7 +7,7 @@ interface Props {
 
 const Profile = (props: Props) => {
   return (
-    <div className='p-4 sm:p-8 text-neutral-900 sm:block hidden"'>
+    <div className='p-4 sm:p-8 text-[#5A5A5A] sm:block hidden"'>
 
       
               {props.userProfile.map((profile) => (

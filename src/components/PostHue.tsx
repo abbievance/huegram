@@ -19,9 +19,9 @@ const PostHue = (props:Props) => {
     <div className='flex-col sm:p-8 p-4  justify-evenly items-center gap-8 '>
 
         <div className='flex flex-col p-4 gap-3 justify-center align-middle'>
-          <h1 className='text-neutral-900 text-center text-2xl w-full ml-1'>Enter a hex code</h1>
+          <h1 className='text-[#5A5A5A] text-center text-2xl w-full ml-1'>Enter a hex code</h1>
           <div className='flex items-center gap-1'>
-          <h1 className='text-neutral-900 text-3xl'><RiHashtag /></h1>
+          <h1 className='text-[#5A5A5A] text-3xl'><RiHashtag /></h1>
             <input type="text" placeholder={`${placeholder.replace("#", "")}`} name="hue" id="hue" value={value}
              onChange={ (event) => {
               if (event.target.value.length <= 6 || event.target.value.toLowerCase() === ""){
